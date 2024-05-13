@@ -49,7 +49,12 @@ long long itc_multi_num(long long number){
             a *= number % 10;
             number = number / 10;
         }
-        return a;
+        if (a > 0){
+            return a;
+        }
+        else{
+            return a * -1;
+        }
     }
 }
 int itc_max_num(long long number){
@@ -88,7 +93,7 @@ int itc_null_count(long long number){
     int a;
     a = 0;
     if (number == 0){
-        return 0;
+        return 1;
     }
     else{
         while (number != 0){
@@ -127,4 +132,12 @@ int itc_mirror_count(long long number){
         num++;
     }
     return kol;
+}
+int itc_bin_num(long long number){
+    int bin, a;
+    bin = 0;
+    a = itc_len_num(long long number);
+    for (int i = 0; i < a; i++){
+        
+    }
 }
