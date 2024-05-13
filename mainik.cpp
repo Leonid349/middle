@@ -30,7 +30,12 @@ int itc_sum_num(long long number){
             a += number % 10;
             number = number / 10;
         }
-        return a;
+        if (a > 0){
+            return a;
+        }
+        else{
+            return a * -1;
+        }
     }
 }
 long long itc_multi_num(long long number){
